@@ -97,7 +97,9 @@ while (my $line = <$csvFile>) {
 
          my $backgroundColour; 
          if ($progress >= 70) {
-            $backgroundColour = "#CCFFCC";
+            $backgroundColour = "#BBFFBB";
+         } elsif ($progress >= 60) {
+            $backgroundColour = "#DDEFCC";
          } elsif ($progress >= 50) {
             $backgroundColour = "#FFE5CC";
          } else {

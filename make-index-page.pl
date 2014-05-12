@@ -53,13 +53,15 @@ while (my $filename = shift @reportFiles ) {
 
     die "Missing progress in $reportFilename" if !defined($progress);
 
-    my $backgroundColour; 
+    my $backgroundColour;
     if ($progress >= 70) {
-        $backgroundColour = "#CCFFCC";
+       $backgroundColour = "#BBFFBB";
+    } elsif ($progress >= 60) {
+       $backgroundColour = "#DDEFCC";
     } elsif ($progress >= 50) {
-        $backgroundColour = "#FFE5CC";
+       $backgroundColour = "#FFE5CC";
     } else {
-        $backgroundColour = "#FFAAAA";
+       $backgroundColour = "#FFAAAA";
     }
 
     $tableHtml .= "    <tr>\n";
