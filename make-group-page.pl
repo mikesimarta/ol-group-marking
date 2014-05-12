@@ -96,9 +96,9 @@ while (my $line = <$csvFile>) {
          # make a pretty table
 
          my $backgroundColour; 
-         if ($progress >= 60) {
+         if ($progress >= 70) {
             $backgroundColour = "#CCFFCC";
-         } elsif ($progress >= 40) {
+         } elsif ($progress >= 50) {
             $backgroundColour = "#FFE5CC";
          } else {
             $backgroundColour = "#FFAAAA";
@@ -129,4 +129,6 @@ printf ("%s", $tableHtml);
 
 my $averageProgress = (1.0 * $totalProgress) / $numStudents;
 
-printf("<p>Average progress: %3.1f%%</p>\n", $averageProgress);
+printf("<p>Average student progress: %3.1f%%</p>\n", $averageProgress);
+
+printf("<p>GitHub: <a href='https://github.com/optimuscoprime/ol-group-marking'>https://github.com/optimuscoprime/ol-group-marking</a></p>\n");
